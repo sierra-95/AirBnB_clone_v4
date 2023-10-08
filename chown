@@ -1,0 +1,9 @@
+#!/bin/bash 
+git filter-branch --env-filter ' 
+NEW_NAME="Stevecool023" 
+NEW_EMAIL="tallmankaranjastevey@gmail.com" 
+export GIT_COMMITTER_NAME="Stevecool023" 
+export GIT_COMMITTER_EMAIL="tallmankaranjastevey@gmail.com" 
+export GIT_AUTHOR_NAME="$NEW" 
+export GIT_AUTHOR_EMAIL="$NEW_EMAIL" 
+' --tag-name-filter cat -- --branches --tags 
